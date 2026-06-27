@@ -84,3 +84,43 @@ MYSQL_ADMIN_TOKEN_TTL_SECONDS=120
   }
 }
 ```
+
+## Codex config.toml Example
+
+```
+[mcp_servers.easy-mysql-admin-mcp]
+args = ["-y", "easy-mysql-admin-mcp"]
+command = "npx"
+enabled = true
+
+[mcp_servers.easy-mysql-admin-mcp.env]
+MYSQL_HOST = "localhost"
+MYSQL_PORT = "3306"
+MYSQL_USER = "root"
+MYSQL_PASSWORD = "your_password"
+MYSQL_DATABASE = "mysql"
+MYSQL_ADMIN_TOKEN_TTL_SECONDS = "120"
+```
+
+## OpenCode opencode.jsonc Example
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "easy-mysql-admin-mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "easy-mysql-admin-mcp"],
+      "enabled": true,
+      "environment": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "your_password",
+        "MYSQL_DATABASE": "mysql",
+        "MYSQL_ADMIN_TOKEN_TTL_SECONDS": "120",
+      },
+    },
+  },
+}
+```
