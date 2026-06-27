@@ -2,23 +2,41 @@
   "name": "easy-mysql-admin-mcp",
   "version": "0.1.0",
   "description": "High privilege MySQL admin MCP server for database and user management",
-  "main": "build/index.js",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mysql",
+    "database",
+    "admin",
+    "dba",
+    "claude",
+    "codex",
+    "opencode"
+  ],
+  "homepage": "https://github.com/chenkumi/easy-mysql-admin-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/chenkumi/easy-mysql-admin-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenkumi/easy-mysql-admin-mcp.git"
+  },
+  "license": "MIT",
+  "author": "Chenkumi",
   "type": "module",
+  "main": "build/index.js",
+  "types": "./build/index.d.ts",
   "bin": {
     "easy-mysql-admin-mcp": "build/index.js"
+  },
+  "directories": {
+    "test": "test"
   },
   "files": [
     "build",
     "README.md",
     "README.zh-TW.md"
   ],
-  "engines": {
-    "node": ">=20"
-  },
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
@@ -34,5 +52,11 @@
   "devDependencies": {
     "@types/node": "^25.9.3",
     "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
